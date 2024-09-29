@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>環境構成図作成アプリ</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-
 
     <form id="shapeForm">
         <input type="text" id="shapeName" placeholder="図形名" required>
@@ -23,34 +22,28 @@
         <button type="submit">図形を登録</button>
     </form>
 
-
     <div id="mainContainer">
         <div id="instructions">↓ここに図形をドロップしてください。↓</div>
-            <div id ="dropArea">
+        <div id="dropArea">
             <div id="trashArea" style="width: 80px; height: 80px; background-color: #fd475d; color: white; text-align: center; line-height: 80px; position: absolute; bottom: 10px; right: 10px;">
                 ゴミ箱
             </div>
         </div>
-
 
         <div id="registeredShapeArea">
             <!-- 登録した図形エリア -->
         </div>
     </div>
 
-
     <div id="duplicateArea" style="width: 100px; height: 100px; background-color: #9dd5e4; color: black; text-align: center; line-height: 100px; position: fixed; bottom: 20px; right: 20px;">
         複製
     </div>
 
-
     <button id="saveButton">画像として保存</button>
-
 
     <script>
         const shapeArea = document.getElementById('registeredShapeArea');
         let selectedElement = null;
-
 
         // 初期図形を追加する関数
         function addShape(shapeName, shapeType, width, height) {
@@ -58,18 +51,15 @@
             shapeElement.classList.add('shape', shapeType);
             shapeElement.draggable = true;
 
-
             // サイズを設定
             if (width) shapeElement.style.width = width + 'px';
             if (height) shapeElement.style.height = height + 'px';
-
 
             // テキストを中央に配置
             shapeElement.textContent = shapeName || '';
             shapeElement.style.display = 'flex';
             shapeElement.style.alignItems = 'center';
             shapeElement.style.justifyContent = 'center';
-
 
             shapeElement.addEventListener('dragstart', function(event) {
                 event.dataTransfer.setData('text/plain', shapeType);
@@ -79,16 +69,13 @@
                 selectedElement = shapeElement;
             });
 
-
             shapeArea.appendChild(shapeElement);
         }
-
 
         // 初期図形を登録
         addShape('机', 'square', 60, 80);
         addShape(null, 'smallCircle', 20, 20);
-        addShape('ピアノ', 'diagonalSquare', 30, 80);      // ななめの四角を追加
-
+        addShape('ピアノ', 'diagonalSquare', 30, 80); // ななめの四角を追加
 
         // フォームのイベントリスナー
         document.getElementById('shapeForm').addEventListener('submit', function(event) {
@@ -98,31 +85,25 @@
             addShape(shapeName, shapeType);
         });
 
-
         // ドロップエリアの設定
         const dropArea = document.getElementById('dropArea');
         const trashArea = document.getElementById('trashArea');
         const duplicateArea = document.getElementById('duplicateArea');
 
-
         dropArea.addEventListener('dragover', function(event) {
             event.preventDefault();
         });
 
-
         dropArea.addEventListener('drop', function(event) {
             event.preventDefault();
-
 
             const shapeType = event.dataTransfer.getData('text/plain');
             const shapeName = event.dataTransfer.getData('text/name');
             const width = event.dataTransfer.getData('text/width');
             const height = event.dataTransfer.getData('text/height');
 
-
             const isInTrash = event.clientX > trashArea.getBoundingClientRect().left &&
                               event.clientY > trashArea.getBoundingClientRect().top;
-
 
             if (isInTrash && selectedElement) {
                 selectedElement.remove(); // ゴミ箱にドロップで削除
@@ -130,29 +111,24 @@
                 return;
             }
 
-
             if (selectedElement) {
                 const rect = dropArea.getBoundingClientRect();
                 const x = event.clientX - rect.left - (selectedElement.offsetWidth / 2); // 中央に配置
                 const y = event.clientY - rect.top - (selectedElement.offsetHeight / 2); // 中央に配置
 
-
                 selectedElement.style.position = 'absolute';
                 selectedElement.style.left = `${x}px`;
                 selectedElement.style.top = `${y}px`;
-
 
                 dropArea.appendChild(selectedElement);
                 selectedElement = null;
             }
         });
 
-
         // 複製機能
         duplicateArea.addEventListener('dragover', function(event) {
             event.preventDefault();
         });
-
 
         duplicateArea.addEventListener('drop', function(event) {
             event.preventDefault();
@@ -164,7 +140,6 @@
                 addShape(shapeName, shapeType, width, height); // 複製を追加
             }
         });
-
 
         // 画像として保存する際にゴミ箱を隠す
         document.getElementById('saveButton').addEventListener('click', function() {
