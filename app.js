@@ -4,11 +4,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// EJSをテンプレートエンジンとして設定
-app.set('view engine', 'ejs');
-
 // 静的ファイル（CSSなど）を提供
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // アップロードされたファイルを保存する設定
 const storage = multer.diskStorage({
@@ -24,7 +21,7 @@ const upload = multer({ storage: storage });
 
 // HTMLページを表示する
 app.get('/', (req, res) => {
-    res.render('index'); // index.ejsをレンダリング
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // ファイルのアップロードを処理
