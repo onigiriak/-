@@ -15,6 +15,7 @@
             <option value="square">□</option>
             <option value="smallCircle">○</option>
             <option value="doubleSmallCircle">○○</option>
+            <option value="verticaldoubleSmallCircle">○<br>○</option>
             <option value="entranceHorizontal">＝</option>
             <option value="entranceVertical">||</option>
             <option value="diagonalSquare">◇</option>
@@ -89,6 +90,19 @@ function resizeDoubleSmallCircle(size) {
 
         // 2つの円を横に並べる
         shapeElement.style.display = 'flex';
+    }
+            // 縦並びのsmallCircleの場合の処理
+    if (shapeType === 'verticalDoubleSmallCircle') {
+        const firstCircle = document.createElement('div');
+        firstCircle.classList.add('smallCircle');
+        shapeElement.appendChild(firstCircle);
+
+        const secondCircle = document.createElement('div');
+        secondCircle.classList.add('smallCircle');
+        shapeElement.appendChild(secondCircle);
+
+        // 2つの円を縦に並べる
+        shapeElement.style.flexDirection = 'column'; // 縦に並べる
     }
  
             shapeElement.addEventListener('dragstart', function(event) {
