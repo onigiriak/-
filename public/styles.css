@@ -102,8 +102,8 @@ body {
 .doubleSmallCircle::before,
 .doubleSmallCircle::after {
     content: '';
-    width: 20px; /* smallCircleと同じサイズ */
-    height: 20px; /* smallCircleと同じサイズ */
+    width: 25px; /* smallCircleと同じサイズ */
+    height: 25px; /* smallCircleと同じサイズ */
     border-radius: 50%; /* 円にする */
     background-color: transparent; /* 背景色 */
     border: 2px solid black; /* 枠線 */
