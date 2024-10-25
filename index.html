@@ -71,6 +71,23 @@
  
             shapeArea.appendChild(shapeElement);
         }
+
+    function addDoubleCircle() {
+        const shapeElement = document.createElement('div');
+        shapeElement.classList.add('doubleCircle');
+        shapeElement.draggable = true;
+
+        // 2つの円を作成して追加
+        const circle1 = document.createElement('div');
+        circle1.classList.add('smallCircle');
+        shapeElement.appendChild(circle1);
+
+        const circle2 = document.createElement('div');
+        circle2.classList.add('smallCircle');
+        shapeElement.appendChild(circle2);
+
+        shapeArea.appendChild(shapeElement);
+    }
  
         // 初期図形を登録
         addShape('机', 'square', 60, 80);
