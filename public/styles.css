@@ -95,17 +95,10 @@ body {
 
 .doubleCircle {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 40px;
     height: 20px;
-}
-
-.doubleCircle .circle{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    margin-right: 5px;
 }
         
 .entranceHorizontal {
