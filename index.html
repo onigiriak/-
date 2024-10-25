@@ -104,9 +104,8 @@ function resizeDoubleSmallCircle(size) {
  
         // 初期図形を登録
         addShape('机', 'square', 60, 80);
-        addShape(null, 'smallCircle', 30, 30);
-        addShape('ピアノ', 'diagonalSquare', 30, 80);      // ななめの四角を追加
         addShape(null, 'doubleSmallCircle'); // 2つの小さい円を追加
+        addShape('ピアノ', 'diagonalSquare', 30, 80);      // ななめの四角を追加
  
         // フォームのイベントリスナー
         document.getElementById('shapeForm').addEventListener('submit', function(event) {
