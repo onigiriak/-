@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+ 
 #saveButton{
     font-size: 0.9em;
     padding: 5px 15px;
     margin-top: 8px;
     margin-left: 15px;
 }
-
+ 
 #shapeForm {
     font-size: 1.3em;
     margin-bottom: 20px;
 }
-
+ 
 #shapeForm input,
 #shapeForm select,
 #shapeForm button {
@@ -21,13 +21,13 @@ body {
     margin-left: 15px;
     padding: 7px;
 }
-
+ 
 #mainContainer {
     display: flex;
     margin-top: 15px; /* フォームとの間に余白を追加 */
     margin-left: 15px;
 }
-
+ 
 #dropArea {
     width: 420px; /* ドロップエリアの幅 */
     height: 420px; /* 高さを指定 */
@@ -35,7 +35,7 @@ body {
     position: relative; /* 子要素の絶対位置指定を可能に */
     margin-top: 15px;
 }
-
+ 
 #duplicateArea {
     width: 100px;
     height: 100px;
@@ -49,7 +49,7 @@ body {
     border: 1.5px solid black; /* 黒の枠線を追加 */
     border-radius: 5px; /* 角を丸くしたい場合はこの行を追加 */
 }
-
+ 
 #registeredShapeArea {
     width: 50%; /* 登録した図形エリアの幅 */
     display: flex;
@@ -60,7 +60,7 @@ body {
     background-color: #fcf4de; /* 背景色を薄い青に */
     margin-top: 15px;
 }
-
+ 
 #instructions {
     position: absolute;
     top: 60px;
@@ -68,7 +68,7 @@ body {
     text-align: center;
     margin-left: 30px;
 }
-
+ 
 .shape {
     margin: 10px;
     display: flex;
@@ -81,26 +81,26 @@ body {
     resize: both;
     overflow: auto;
 }
-
+ 
 .square {
     width: 80px;
     height: 80px;
 }
-
+ 
 .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+ 
+.smallCircle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
-
-.doubleCircle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
-        
+ 
 .entranceHorizontal {
-     width: 70px;
+    width: 70px;
     height: 50px;
     position: relative;
     display: flex;
@@ -108,7 +108,7 @@ body {
     justify-content: center;
     border: none;
 }
-
+ 
 .entranceHorizontal::before,
 .entranceHorizontal::after {
     content: '';
@@ -118,15 +118,15 @@ body {
     width: 100%;
     left: 0;
 }
-
+ 
 .entranceHorizontal::before {
     top: 0;
 }
-
+ 
 .entranceHorizontal::after {
     bottom: 0;
 }
-
+ 
 .entranceVertical {
     width: 50px;
     height: 70px;
@@ -136,7 +136,7 @@ body {
     justify-content: center;
     border: none;
 }
-
+ 
 .entranceVertical::before,
 .entranceVertical::after {
     content: '';
@@ -146,15 +146,15 @@ body {
     height: 100%;
     top: 0;
 }
-
+ 
 .entranceVertical::before {
     left: 0;
 }
-
+ 
 .entranceVertical::after {
     right: 0;
 }
-
+ 
 .diagonalSquare {
     width: 80px;
     height: 80px;
