@@ -87,29 +87,10 @@ body {
     height: 80px;
 }
  
-.circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
- 
 .smallCircle {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-}
-
-.doubleCircle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px; /* 適切な幅を設定 */
-    height: 20px; /* 高さを設定 */
-    position: relative;
-}
-
-.doubleCircle .smallCircle {
-    margin: 0 5px; /* 円の間のマージンを追加 */
 }
  
 .entranceHorizontal {
