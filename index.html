@@ -13,7 +13,6 @@
         <input type="text" id="shapeName" placeholder="図形名" required>
         <select id="shapeType">
             <option value="square">□</option>
-            <option value="circle">〇</option>
             <option value="smallCircle">○</option>
             <option value="entranceHorizontal">＝</option>
             <option value="entranceVertical">||</option>
@@ -71,29 +70,11 @@
  
             shapeArea.appendChild(shapeElement);
         }
-
-    function addDoubleCircle() {
-        const shapeElement = document.createElement('div');
-        shapeElement.classList.add('doubleCircle');
-        shapeElement.draggable = true;
-
-        // 2つの円を作成して追加
-        const circle1 = document.createElement('div');
-        circle1.classList.add('smallCircle');
-        shapeElement.appendChild(circle1);
-
-        const circle2 = document.createElement('div');
-        circle2.classList.add('smallCircle');
-        shapeElement.appendChild(circle2);
-
-        shapeArea.appendChild(shapeElement);
-    }
  
         // 初期図形を登録
         addShape('机', 'square', 60, 80);
-        addShape(null, 'smallCircle', 20, 20);
+        addShape(null, 'smallCircle', 30, 30);
         addShape('ピアノ', 'diagonalSquare', 30, 80);      // ななめの四角を追加
-        addDoubleCircle(); // 2つの円を並べた図形を追加
  
         // フォームのイベントリスナー
         document.getElementById('shapeForm').addEventListener('submit', function(event) {
