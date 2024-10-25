@@ -13,8 +13,8 @@
         <input type="text" id="shapeName" placeholder="図形名" required>
         <select id="shapeType">
             <option value="square">□</option>
-            <option value="circle">〇</option>
-            <option value="smallCircle">○</option>
+            <option value="circle">○</option>
+            <option value="double-circle">○</option>
             <option value="entranceHorizontal">＝</option>
             <option value="entranceVertical">||</option>
             <option value="diagonalSquare">◇</option>
@@ -74,7 +74,7 @@
  
         // 初期図形を登録
         addShape('机', 'square', 60, 80);
-        addShape(null, 'smallCircle', 20, 20);
+        addShape(null, 'circle', 20, 20);
         addShape('ピアノ', 'diagonalSquare', 30, 80);      // ななめの四角を追加
  
         // フォームのイベントリスナー
