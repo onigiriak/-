@@ -44,6 +44,22 @@
     <script>
         const shapeArea = document.getElementById('registeredShapeArea');
         let selectedElement = null;
+
+        // サイズ変更関数
+function resizeDoubleSmallCircle(size) {
+    const doubleSmallCircle = document.querySelector('.doubleSmallCircle');
+    if (doubleSmallCircle) {
+        doubleSmallCircle.style.width = `${size}px`;
+        doubleSmallCircle.style.height = `${size}px`;
+
+        // 丸2つのサイズも調整
+        const circles = doubleSmallCircle.querySelectorAll('::before, ::after');
+        circles.forEach(circle => {
+            circle.style.width = `${size / 2}px`; // 半分のサイズに設定
+            circle.style.height = `${size / 2}px`;
+        });
+    }
+}
  
         // 初期図形を追加する関数
         function addShape(shapeName, shapeType, width, height) {
