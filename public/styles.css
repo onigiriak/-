@@ -103,12 +103,12 @@ body {
 .doubleSmallCircle::before,
 .doubleSmallCircle::after {
     content: '';
-    width: 25px; /* smallCircleと同じサイズ */
-    height: 25px; /* smallCircleと同じサイズ */
+    width: 23px; /* smallCircleと同じサイズ */
+    height: 23px; /* smallCircleと同じサイズ */
     border-radius: 50%; /* 円にする */
     background-color: transparent; /* 背景色 */
     border: 2px solid black; /* 枠線 */
-    margin: 0 5px; /* 円の間に余白を追加 */
+    margin: 0 7px; /* 円の間に余白を追加 */
 }
 
 .verticaldoubleSmallCircle {
@@ -123,12 +123,12 @@ body {
 .verticaldoubleSmallCircle::before,
 .verticaldoubleSmallCircle::after {
     content: '';
-    width: 25px; /* smallCircleと同じサイズ */
-    height: 25px; /* smallCircleと同じサイズ */
+    width: 23px; /* smallCircleと同じサイズ */
+    height: 23px; /* smallCircleと同じサイズ */
     border-radius: 50%; /* 円にする */
     background-color: transparent; /* 背景色 */
     border: 2px solid black; /* 枠線 */
-    margin: 5px 0; /* 円の間に余白を追加 */
+    margin: 7px 0; /* 円の間に余白を追加 */
 }
  
 .entranceHorizontal {
