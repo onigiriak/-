@@ -94,29 +94,20 @@ body {
 }
 
 .doubleSmallCircle {
-    position: relative;
-    display: inline-block; /* インラインで表示 */
-    width: 40px; 
-    height: 20px; 
+    display: flex; /* フレックスボックスを使用して並べる */
+    align-items: center; /* 垂直中央に配置 */
+    justify-content: center; /* 水平中央に配置 */
 }
 
 .doubleSmallCircle::before,
 .doubleSmallCircle::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px; /* 丸のサイズ */
-    height: 20px; /* 丸のサイズ */
-    background-color: blue; /* 丸の色 */
-    border-radius: 50%; /* 丸にする */
-}
-
-.doubleSmallCircle::before {
-    left: 0px; /* 左の位置を調整 */
-}
-
-.doubleSmallCircle::after {
-    left: 0px; /* 右の位置を調整 */
+    content: '';
+    width: 20px; /* smallCircleと同じサイズ */
+    height: 20px; /* smallCircleと同じサイズ */
+    border-radius: 50%; /* 円にする */
+    background-color: transparent; /* 背景色 */
+    border: 2px solid black; /* 枠線 */
+    margin: 0 5px; /* 円の間に余白を追加 */
 }
  
 .entranceHorizontal {
