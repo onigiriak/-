@@ -92,6 +92,23 @@ body {
     height: 30px;
     border-radius: 50%;
 }
+
+.doubleSmallCircle {
+    display: flex; /* フレックスボックスを使用して並べる */
+    align-items: center; /* 垂直中央に配置 */
+    justify-content: center; /* 水平中央に配置 */
+}
+
+.doubleSmallCircle::before,
+.doubleSmallCircle::after {
+    content: '';
+    width: 20px; /* smallCircleと同じサイズ */
+    height: 20px; /* smallCircleと同じサイズ */
+    border-radius: 50%; /* 円にする */
+    background-color: white; /* 背景色 */
+    border: 2px solid black; /* 枠線 */
+    margin: 0 5px; /* 円の間に余白を追加 */
+}
  
 .entranceHorizontal {
     width: 70px;
