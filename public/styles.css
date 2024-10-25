@@ -97,6 +97,8 @@ body {
     display: flex; /* フレックスボックスを使用して並べる */
     align-items: center; /* 垂直中央に配置 */
     justify-content: center; /* 水平中央に配置 */
+    background: none;
+    border: none;
 }
 
 .doubleSmallCircle::before,
