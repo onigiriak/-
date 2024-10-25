@@ -110,6 +110,13 @@ body {
     border: 2px solid black; /* 枠線 */
     margin: 0 5px; /* 円の間に余白を追加 */
 }
+
+.verticalDoubleSmallCircle {
+    display: flex; /* フレックスボックスを使用して並べる */
+    align-items: center; /* 垂直中央に配置 */
+    justify-content: center; /* 水平中央に配置 */
+    flex-direction: column; /* 縦に並べる */
+}
  
 .entranceHorizontal {
     width: 70px;
