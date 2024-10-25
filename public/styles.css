@@ -113,9 +113,22 @@ body {
 
 .verticaldoubleSmallCircle {
     display: flex; /* フレックスボックスを使用して並べる */
+    transform: rtate(90deg);
     align-items: center; /* 垂直中央に配置 */
     justify-content: center; /* 水平中央に配置 */
     flex-direction: column; /* 縦に並べる */
+    border: none;
+}
+
+.verticaldoubleSmallCircle::before,
+.verticaldoubleSmallCircle::after {
+    content: '';
+    width: 25px; /* smallCircleと同じサイズ */
+    height: 25px; /* smallCircleと同じサイズ */
+    border-radius: 50%; /* 円にする */
+    background-color: transparent; /* 背景色 */
+    border: 2px solid black; /* 枠線 */
+    margin: 0 5px; /* 円の間に余白を追加 */
 }
  
 .entranceHorizontal {
