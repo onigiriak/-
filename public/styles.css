@@ -88,17 +88,25 @@ body {
 }
 
 .circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-.smallCircle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
+.doubleCircle {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+}
+
+.doubleCircle .circle{
+    width: 20px;
+    heigth: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+}
+        
 .entranceHorizontal {
     width: 70px;
     height: 50px;
