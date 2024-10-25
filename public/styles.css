@@ -111,7 +111,7 @@ body {
     margin: 0 5px; /* 円の間に余白を追加 */
 }
 
-.verticalDoubleSmallCircle {
+.verticaldoubleSmallCircle {
     display: flex; /* フレックスボックスを使用して並べる */
     align-items: center; /* 垂直中央に配置 */
     justify-content: center; /* 水平中央に配置 */
