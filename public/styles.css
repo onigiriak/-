@@ -95,16 +95,16 @@ body {
 
 .doubleCircle {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 40px;
     height: 20px;
 }
 
 .doubleCircle .circle{
     width: 20px;
-    heigth: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: white;
+    background-color: red;
     margin-right: 5px;
 }
         
