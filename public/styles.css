@@ -96,8 +96,8 @@ body {
 .doubleSmallCircle {
     position: relative;
     display: inline-block; /* インラインで表示 */
-    width: 0; /* 親要素に幅を設定しない */
-    height: 0; /* 親要素に高さを設定しない */
+    width: 40px; 
+    height: 20px; 
 }
 
 .doubleSmallCircle::before,
@@ -112,11 +112,11 @@ body {
 }
 
 .doubleSmallCircle::before {
-    left: -10px; /* 左の位置を調整 */
+    left: 0px; /* 左の位置を調整 */
 }
 
 .doubleSmallCircle::after {
-    left: 10px; /* 右の位置を調整 */
+    left: 0px; /* 右の位置を調整 */
 }
  
 .entranceHorizontal {
