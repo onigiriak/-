@@ -93,6 +93,13 @@ body {
     border-radius: 50%;
 }
 
+.smallblackCircle {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+
 .doubleSmallCircle {
     display: flex; /* フレックスボックスを使用して並べる */
     align-items: center; /* 垂直中央に配置 */
