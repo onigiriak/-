@@ -29,7 +29,7 @@ body {
 }
  
 #dropArea {
-    width: 600px; /* ドロップエリアの幅 */
+    width: 550px; /* ドロップエリアの幅 */
     height: 350px; /* 高さを指定 */
     border: 3px solid #000; /* ボーダーのスタイル */
     position: relative; /* 子要素の絶対位置指定を可能に */
